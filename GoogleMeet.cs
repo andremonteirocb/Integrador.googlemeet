@@ -25,16 +25,6 @@ namespace Phidelis.Integracao.GoogleMeet
                 JsonSerializer serializer = new JsonSerializer();
                 dadosDaConta = (DadosDaConta)serializer.Deserialize(file, typeof(DadosDaConta));
             }
-
-            //using (StreamReader sr = new StreamReader(pathJson))
-            //{
-            //    // Read the stream to a string, and write the string to the console.
-            //    //String line = sr.ReadToEnd();
-            //    JsonSerializer serializer = new JsonSerializer();
-            //    dadosDaConta = (DadosDaConta)serializer.Deserialize(sr, typeof(DadosDaConta));
-            //}
-
-
             this.CalendarService = GetCalendarService(pathJson, email, dadosDaConta.project_id, apiKey);
         }
 
